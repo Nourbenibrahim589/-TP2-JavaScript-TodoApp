@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application de Gestion de Tâches - To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📋 Ma Liste de Tâches</h1>
+            <p class="subtitle">Gérez vos tâches efficacement</p>
+        </div>
+
+        <!-- Zone de saisie et boutons d'action -->
+        <div class="input-section">
+            <div class="input-wrapper">
+                <input 
+                    type="text" 
+                    id="taskInput" 
+                    class="task-input" 
+                    placeholder="Ajouter une nouvelle tâche..."
+                    autocomplete="off"
+                >
+                <button id="addBtn" class="btn btn-add">➕ Ajouter</button>
+            </div>
+            
+            <!-- Zone de recherche -->
+            <div class="search-wrapper">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input" 
+                    placeholder="🔍 Chercher une tâche..."
+                    autocomplete="off"
+                >
+            </div>
+        </div>
+
+        <!-- Statistiques -->
+        <div class="stats-section">
+            <div class="stat-item">
+                <span class="stat-label">Total:</span>
+                <span id="totalCount" class="stat-value">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">En cours:</span>
+                <span id="pendingCount" class="stat-value">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Terminées:</span>
+                <span id="completedCount" class="stat-value">0</span>
+            </div>
+        </div>
+
+        <!-- Boutons d'action globale -->
+        <div class="action-buttons">
+            <button id="clearAllBtn" class="btn btn-clear">🗑️ Tout supprimer</button>
+            <button id="clearCompletedBtn" class="btn btn-clear-completed">✓ Supprimer les terminées</button>
+        </div>
+
+        <!-- Liste des tâches -->
+        <div class="tasks-section">
+            <ul id="taskList" class="task-list">
+                <!-- Les tâches seront ajoutées dynamiquement ici -->
+            </ul>
+            <div id="emptyMessage" class="empty-message">
+                📭 Aucune tâche pour le moment. Ajoutez-en une !
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
